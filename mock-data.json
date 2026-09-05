@@ -1,0 +1,387 @@
+[
+  {
+    "id": "CP-KOL-001",
+    "title": "Tree Hanging Over Live Power Lines",
+    "category": "Electrical & Safety",
+    "description": "A large tree is hanging dangerously close to overhead electrical cables and may fall onto the wires during strong winds or rain.",
+    "location": {
+      "area": "Southern Avenue",
+      "city": "Kolkata",
+      "landmark": "Near Lake Road crossing",
+      "distanceKm": 0.4
+    },
+    "peopleImpacted": 46,
+    "evidences": 8,
+    "peopleFollowing": 31,
+    "priority": "high",
+    "aiSituationBrief": "Multiple residents have reported a large tree branch leaning over active electrical lines near Southern Avenue. Reports have increased after recent rainfall. Photos from different angles suggest the branch has moved closer to the cables. The issue has been routed to the Parks & Squares Department with electrical safety coordination requested.",
+    "timeline": [
+      {
+        "type": "reported",
+        "date": "2026-08-29",
+        "title": "First reported",
+        "description": "Resident reported a dangerously hanging tree branch near overhead electrical cables."
+      },
+      {
+        "type": "assigned",
+        "date": "2026-08-30",
+        "title": "Assigned to department",
+        "department": "KMC Parks & Squares Department",
+        "description": "Issue forwarded for inspection and pruning."
+      },
+      {
+        "type": "status",
+        "date": "2026-09-03",
+        "title": "Inspection scheduled",
+        "status": "In progress",
+        "expectedResolutionDate": "2026-09-07",
+        "description": "Joint inspection with electrical utility personnel requested before removal."
+      },
+      {
+        "type": "verification",
+        "title": "Resolution verification",
+        "status": "pending"
+      }
+    ],
+    "image": "/images/issues/hanging-tree.jpg",
+    "keywords": [
+      "tree",
+      "branch",
+      "hanging tree",
+      "fallen tree",
+      "power line",
+      "power lines",
+      "electrical cable",
+      "electric wire",
+      "overhead wire",
+      "live wire",
+      "pruning",
+      "strong wind",
+      "storm"
+    ],
+    "citizenReports": [
+      {
+        "name": "Ananya Roy",
+        "date": "2026-09-03",
+        "text": "The branch moved closer to the power lines after last night’s rain."
+      },
+      {
+        "name": "Rohan Sen",
+        "date": "2026-09-02",
+        "text": "Sparks were visible when the wind pushed smaller branches against the cable."
+      },
+      {
+        "name": "Mita Das",
+        "date": "2026-08-29",
+        "text": "This needs urgent pruning before the next storm."
+      }
+    ]
+  },
+  {
+    "id": "CP-KOL-002",
+    "title": "Footpath Blocked by Illegal Encroachment",
+    "category": "Roads & Public Space",
+    "description": "A permanent roadside structure and stored materials are occupying most of the footpath, forcing pedestrians to walk on the carriageway.",
+    "location": {
+      "area": "Gariahat",
+      "city": "Kolkata",
+      "landmark": "Near Hindustan Park entrance",
+      "distanceKm": 0.8
+    },
+    "peopleImpacted": 128,
+    "evidences": 14,
+    "peopleFollowing": 73,
+    "priority": "medium",
+    "aiSituationBrief": "Residents have repeatedly reported obstruction of the pedestrian footpath at this location. Recent evidence shows pedestrians, including elderly residents, stepping onto the main road to bypass the encroachment. Similar reports from the same stretch have been grouped into this issue.",
+    "timeline": [
+      {
+        "type": "reported",
+        "date": "2026-08-24",
+        "title": "First reported",
+        "description": "Footpath obstruction reported by a pedestrian."
+      },
+      {
+        "type": "assigned",
+        "date": "2026-08-26",
+        "title": "Assigned to department",
+        "department": "KMC Roads Department",
+        "description": "Complaint forwarded for local inspection."
+      },
+      {
+        "type": "status",
+        "date": "2026-09-02",
+        "title": "Site verification completed",
+        "status": "Action pending",
+        "expectedResolutionDate": "2026-09-10",
+        "description": "Encroachment confirmed during field inspection. Removal action awaiting coordination with local enforcement."
+      },
+      {
+        "type": "verification",
+        "title": "Resolution verification",
+        "status": "pending"
+      }
+    ],
+    "image": "/images/issues/gariahat-encroachment.jpg",
+    "keywords": [
+      "footpath",
+      "sidewalk",
+      "pavement",
+      "blocked path",
+      "encroachment",
+      "illegal structure",
+      "roadside structure",
+      "stored materials",
+      "pedestrian",
+      "walk on road",
+      "carriageway",
+      "obstruction"
+    ],
+    "citizenReports": [
+      {
+        "name": "Sohini Dutta",
+        "date": "2026-09-02",
+        "text": "The footpath is almost completely blocked, so children and older residents must walk on the road."
+      },
+      {
+        "name": "Arijit Sen",
+        "date": "2026-08-29",
+        "text": "Stored materials leave no safe space for pedestrians near the entrance."
+      },
+      {
+        "name": "Rhea Mukherjee",
+        "date": "2026-08-24",
+        "text": "Traffic makes it dangerous to step around this obstruction."
+      }
+    ]
+  },
+  {
+    "id": "CP-KOL-003",
+    "title": "Bus Emitting Excessive Black Smoke",
+    "category": "Air Pollution",
+    "description": "A regularly operating public bus is emitting dense black exhaust smoke, especially during acceleration and while leaving stops.",
+    "location": {
+      "area": "Esplanade",
+      "city": "Kolkata",
+      "landmark": "Near Esplanade bus terminus",
+      "distanceKm": 1.9
+    },
+    "peopleImpacted": 214,
+    "evidences": 11,
+    "peopleFollowing": 58,
+    "priority": "high",
+    "aiSituationBrief": "Video and photo reports submitted over four days appear to show the same bus emitting unusually dense exhaust smoke near Esplanade. Reports contain matching route and vehicle characteristics. The issue has been referred for pollution compliance verification.",
+    "timeline": [
+      {
+        "type": "reported",
+        "date": "2026-08-31",
+        "title": "First reported",
+        "description": "Commuter submitted a video showing heavy black exhaust from a bus."
+      },
+      {
+        "type": "assigned",
+        "date": "2026-09-01",
+        "title": "Assigned to department",
+        "department": "West Bengal Transport Department",
+        "description": "Vehicle details forwarded for verification."
+      },
+      {
+        "type": "status",
+        "date": "2026-09-04",
+        "title": "Vehicle inspection requested",
+        "status": "Under investigation",
+        "expectedResolutionDate": "2026-09-09",
+        "description": "Pollution compliance inspection requested based on submitted evidence."
+      },
+      {
+        "type": "verification",
+        "title": "Resolution verification",
+        "status": "pending"
+      }
+    ],
+    "image": "/images/issues/polluting-bus.jpg",
+    "keywords": [
+      "bus",
+      "black smoke",
+      "exhaust",
+      "vehicle smoke",
+      "air pollution",
+      "polluting vehicle",
+      "dense smoke",
+      "emission",
+      "emissions",
+      "fumes",
+      "diesel",
+      "bus terminus"
+    ],
+    "citizenReports": [
+      {
+        "name": "Kabir Ghosh",
+        "date": "2026-09-04",
+        "text": "The bus released thick black smoke while pulling away from the stop."
+      },
+      {
+        "name": "Nandita Pal",
+        "date": "2026-09-02",
+        "text": "I see the same bus emitting heavy exhaust on this route most mornings."
+      },
+      {
+        "name": "Imran Ali",
+        "date": "2026-08-31",
+        "text": "The smoke made several passengers cover their faces at the terminus."
+      }
+    ]
+  },
+  {
+    "id": "CP-KOL-004",
+    "title": "Lake Edge Choked With Garbage",
+    "category": "Waste & Sanitation",
+    "description": "Plastic waste, household garbage and floating debris have accumulated along a large section of the lake edge, creating foul odour and obstructing water flow.",
+    "location": {
+      "area": "Rabindra Sarobar",
+      "city": "Kolkata",
+      "landmark": "Near the southern walking track",
+      "distanceKm": 1.2
+    },
+    "peopleImpacted": 367,
+    "evidences": 22,
+    "peopleFollowing": 146,
+    "priority": "high",
+    "aiSituationBrief": "The issue has received the highest number of nearby reports this week. Photos submitted from multiple points show persistent garbage accumulation along the same section of the lake. Residents have also reported foul odour and an increase in insects. Cleanup and waste-source identification have both been requested.",
+    "timeline": [
+      {
+        "type": "reported",
+        "date": "2026-08-22",
+        "title": "First reported",
+        "description": "Garbage accumulation along the lake edge reported by a morning walker."
+      },
+      {
+        "type": "assigned",
+        "date": "2026-08-23",
+        "title": "Assigned to department",
+        "department": "KMC Solid Waste Management Department",
+        "description": "Issue assigned for cleanup and assessment."
+      },
+      {
+        "type": "status",
+        "date": "2026-09-03",
+        "title": "Partial cleanup completed",
+        "status": "In progress",
+        "expectedResolutionDate": "2026-09-08",
+        "description": "Surface waste has been partially removed. Additional cleaning is scheduled for inaccessible sections."
+      },
+      {
+        "type": "verification",
+        "title": "Resolution verification",
+        "status": "pending"
+      }
+    ],
+    "image": "/images/issues/lake-garbage.jpg",
+    "keywords": [
+      "lake",
+      "garbage",
+      "trash",
+      "waste",
+      "plastic waste",
+      "floating debris",
+      "foul odour",
+      "bad smell",
+      "water pollution",
+      "dirty water",
+      "insects",
+      "blocked water flow"
+    ],
+    "citizenReports": [
+      {
+        "name": "Priyanka Bose",
+        "date": "2026-09-03",
+        "text": "The smell is strongest beside the southern walking track, especially in the morning."
+      },
+      {
+        "name": "Dev Mallick",
+        "date": "2026-08-28",
+        "text": "Plastic and household waste are collecting along the same edge again."
+      },
+      {
+        "name": "Tania Saha",
+        "date": "2026-08-22",
+        "text": "The floating debris is blocking water movement near the bank."
+      }
+    ]
+  },
+  {
+    "id": "CP-KOL-005",
+    "title": "Unstable Roadside Statue Poses Falling Risk",
+    "category": "Public Infrastructure & Safety",
+    "description": "A roadside statue appears to be leaning from its base, with visible cracks around the pedestal. Residents fear it could collapse onto pedestrians or nearby vehicles.",
+    "location": {
+      "area": "Shyambazar",
+      "city": "Kolkata",
+      "landmark": "Near Bhupendra Bose Avenue",
+      "distanceKm": 1.0
+    },
+    "peopleImpacted": 79,
+    "evidences": 9,
+    "peopleFollowing": 42,
+    "priority": "critical",
+    "aiSituationBrief": "Several reports submitted from the same junction show visible deterioration around the statue's base. Newer photos indicate a slight tilt compared with earlier evidence. Because the location has heavy pedestrian and vehicle movement, the issue has been escalated for structural inspection.",
+    "timeline": [
+      {
+        "type": "reported",
+        "date": "2026-09-01",
+        "title": "First reported",
+        "description": "Resident reported cracks around the statue pedestal and possible leaning."
+      },
+      {
+        "type": "assigned",
+        "date": "2026-09-01",
+        "title": "Assigned to department",
+        "department": "KMC Engineering Department",
+        "description": "Urgent structural inspection requested."
+      },
+      {
+        "type": "status",
+        "date": "2026-09-04",
+        "title": "Safety barricade recommended",
+        "status": "Urgent inspection pending",
+        "expectedResolutionDate": "2026-09-06",
+        "description": "Temporary barricading recommended while structural stability is assessed."
+      },
+      {
+        "type": "verification",
+        "title": "Resolution verification",
+        "status": "pending"
+      }
+    ],
+    "image": "/images/issues/unstable-statue.jpg",
+    "keywords": [
+      "statue",
+      "leaning statue",
+      "unstable statue",
+      "cracked pedestal",
+      "pedestal",
+      "falling risk",
+      "collapse",
+      "public monument",
+      "structural crack",
+      "barricade",
+      "tilting structure"
+    ],
+    "citizenReports": [
+      {
+        "name": "Amit Dey",
+        "date": "2026-09-04",
+        "text": "The crack around the base looks wider than it did earlier this week."
+      },
+      {
+        "name": "Ishita Roy",
+        "date": "2026-09-02",
+        "text": "People wait directly beside the leaning statue at this busy junction."
+      },
+      {
+        "name": "Sayan Mitra",
+        "date": "2026-09-01",
+        "text": "The pedestal appears damaged and should be inspected before it falls."
+      }
+    ]
+  }
+]
