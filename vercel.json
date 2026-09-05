@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/near-you.html"
+      "destination": "/near-you"
     }
   ]
 }
