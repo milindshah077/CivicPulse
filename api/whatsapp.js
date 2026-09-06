@@ -131,7 +131,7 @@ export default {
 
     if (state.step === "photo") {
       if (!hasImage) return twiml("Please share a relevant photo for the issue", state);
-      return twiml("Please share the location of the issue.", {
+      return twiml("Please share the location of the issue, or type the address or a nearby landmark.", {
         ...state,
         step: "location",
         mediaCount: Math.max(mediaCount, 1),
@@ -139,7 +139,11 @@ export default {
     }
 
     if (state.step === "location") {
-      if (!latitude || !longitude) return twiml("Please share the location of the issue.", state);
+      const hasCoordinates = Boolean(latitude && longitude);
+      const resolvedAddress = address || body;
+      if (!hasCoordinates && !resolvedAddress) {
+        return twiml("Please share the location of the issue, or type the address or a nearby landmark.", state);
+      }
 
       try {
         const dataResponse = await fetch(new URL("/mock-data.json", request.url));
@@ -169,7 +173,7 @@ export default {
           step: "confirmation",
           latitude,
           longitude,
-          address,
+          address: resolvedAddress,
           matchedIssueId: match.id,
         });
       } catch {
@@ -184,7 +188,7 @@ export default {
             issueId: state.matchedIssueId,
             reporterName: state.reporterName || whatsappName,
             text: state.description,
-            location: state.address || `${state.latitude}, ${state.longitude}`,
+            location: state.address || [state.latitude, state.longitude].filter(Boolean).join(", "),
             evidenceCount: state.mediaCount || 0,
             isFollowing: true,
             source: "whatsapp",
