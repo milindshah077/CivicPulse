@@ -1,5 +1,6 @@
 const COOKIE_NAME = "civic_pulse_flow";
 const COOKIE_MAX_AGE = 4 * 60 * 60;
+import { addSubReport } from "../lib/report-store.js";
 
 const normalize = (value = "") =>
   value.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
@@ -113,18 +114,19 @@ export default {
     const latitude = String(form.get("Latitude") || "").trim();
     const longitude = String(form.get("Longitude") || "").trim();
     const address = String(form.get("Address") || form.get("Label") || "").trim();
+    const whatsappName = String(form.get("ProfileName") || form.get("WaId") || form.get("From") || "WhatsApp user").trim();
     let state = readState(request);
 
     if (normalizedBody === "restart" || normalizedBody === "start over") state = null;
 
     if (!state) {
       if (!body) return twiml("Please describe the issue you would like to report.", { step: "description" });
-      return twiml("Please share a relevant photo for the issue", { step: "photo", description: body });
+      return twiml("Please share a relevant photo for the issue", { step: "photo", description: body, reporterName: whatsappName });
     }
 
     if (state.step === "description") {
       if (!body) return twiml("Please describe the issue you would like to report.", state);
-      return twiml("Please share a relevant photo for the issue", { step: "photo", description: body });
+      return twiml("Please share a relevant photo for the issue", { step: "photo", description: body, reporterName: whatsappName });
     }
 
     if (state.step === "photo") {
@@ -177,7 +179,20 @@ export default {
 
     if (state.step === "confirmation") {
       if (isYes(body)) {
-        return twiml("✅ *Success!* Your report has been linked to the existing issue. You’re now following its updates.", null);
+        try {
+          await addSubReport({
+            issueId: state.matchedIssueId,
+            reporterName: state.reporterName || whatsappName,
+            text: state.description,
+            location: state.address || `${state.latitude}, ${state.longitude}`,
+            evidenceCount: state.mediaCount || 0,
+            source: "whatsapp",
+          });
+          return twiml("✅ *Success!* Your report has been linked to the existing issue. You’re now following its updates.", null);
+        } catch (error) {
+          console.error("WhatsApp report storage error", error);
+          return twiml("I couldn't save your report right now. Please reply *Yes* to try again.", state);
+        }
       }
       if (isNo(body)) {
         return twiml("✅ *Report submitted!* Your issue has been created as a new public report.", null);
