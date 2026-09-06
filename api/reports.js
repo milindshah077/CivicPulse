@@ -1,4 +1,4 @@
-import { addSubReport, getSubReports } from "../lib/report-store.js";
+import { addSubReport, getAllReportMetrics, getReportMetrics, getSubReports, updateSubReportFollowing } from "../lib/report-store.js";
 
 const json = (value, status = 200) => new Response(JSON.stringify(value), {
   status,
@@ -11,8 +11,9 @@ export default {
       const url = new URL(request.url);
       if (request.method === "GET") {
         const issueId = url.searchParams.get("issueId")?.trim();
-        if (!issueId) return json({ error: "issueId is required" }, 400);
-        return json({ reports: await getSubReports(issueId) });
+        if (!issueId) return json({ metrics: await getAllReportMetrics() });
+        const [reports, metrics] = await Promise.all([getSubReports(issueId), getReportMetrics(issueId)]);
+        return json({ reports, metrics });
       }
 
       if (request.method === "POST") {
@@ -29,9 +30,21 @@ export default {
           text,
           location: String(body.location || "").trim(),
           evidenceCount: Math.max(0, Number.parseInt(body.evidenceCount, 10) || 0),
+          isFollowing: body.isFollowing !== false,
           source,
         });
-        return json({ report }, 201);
+        return json({ report, metrics: await getReportMetrics(issueId) }, 201);
+      }
+
+      if (request.method === "PATCH") {
+        const body = await request.json();
+        const reportId = Number.parseInt(body.reportId, 10);
+        if (!Number.isSafeInteger(reportId) || typeof body.isFollowing !== "boolean") {
+          return json({ error: "reportId and isFollowing are required" }, 400);
+        }
+        const report = await updateSubReportFollowing(reportId, body.isFollowing);
+        if (!report) return json({ error: "Report not found" }, 404);
+        return json({ report, metrics: await getReportMetrics(report.issue_id) });
       }
 
       return json({ error: "Method not allowed" }, 405);

@@ -186,6 +186,7 @@ export default {
             text: state.description,
             location: state.address || `${state.latitude}, ${state.longitude}`,
             evidenceCount: state.mediaCount || 0,
+            isFollowing: true,
             source: "whatsapp",
           });
           return twiml("✅ *Success!* Your report has been linked to the existing issue. You’re now following its updates.", null);
