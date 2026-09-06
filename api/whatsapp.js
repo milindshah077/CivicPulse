@@ -97,7 +97,7 @@ function isYes(body) {
 }
 
 function isNo(body) {
-  return /^(no|n|2|no this is different|this is different|different)$/i.test(body.trim());
+  return /^(no|n|0|no this is different|this is different|different)$/i.test(body.trim());
 }
 
 export default {
@@ -159,8 +159,8 @@ export default {
           `📅 First reported: ${formatDate(firstReported(match))}`,
           "",
           "Please reply with:",
-          "*1. Yes, same issue*",
-          "*2. No, this is different*",
+          "*1 if same issue*",
+          "*0 if different*",
         ].join("\n");
 
         await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -198,7 +198,7 @@ export default {
       if (isNo(body)) {
         return twiml("✅ *Report submitted!* Your issue has been created as a new public report.", null);
       }
-      return twiml("Please reply with *1* for Yes, same issue or *2* for No, this is different.", state);
+      return twiml("Please reply with *1 if same issue* or *0 if different*.", state);
     }
 
     return twiml("Please describe the issue you would like to report.", { step: "description" });
